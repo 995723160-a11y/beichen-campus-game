@@ -1,5 +1,26 @@
 'use strict';
 
+/* ========== 图片预加载器 ========== */
+const preloaded = {};
+let preloadQueue = [];
+
+function preloadImage(src) {
+  if (!src || preloaded[src]) return;
+  return new Promise(resolve => {
+    const img = new Image();
+    img.onload = img.onerror = () => { preloaded[src] = true; resolve(); };
+    img.src = src;
+  });
+}
+
+async function preloadAll(sources) {
+  return Promise.all(sources.filter(Boolean).map(preloadImage));
+}
+
+/* 加载中遮罩 */
+function showLoading(){ document.getElementById('loading-overlay')?.classList.add('show'); }
+function hideLoading(){ document.getElementById('loading-overlay')?.classList.remove('show'); }
+
 /* ========== 资源路径（新图片在美术资源/根目录）========== */
 const A='美术资源/';
 const assets={
@@ -104,7 +125,9 @@ function type(text,target,done){
 }
 
 /* ========== 启动页 ========== */
-function home(){
+async function home(){
+  // 先预加载启动页背景，再渲染
+  await preloadAll([assets.home, assets.boy, assets.cat]);
   html(`<section class="screen home-scr">
     <img class="bg-img" src="${assets.home}" alt="" draggable="false">
 
@@ -150,7 +173,8 @@ const spotPos=[
   {left:'90%',top:'68%'}    // 3:行动引擎站
 ];
 
-function showMap(focus){
+async function showMap(focus){
+  await preloadImage(assets.map);
   let d=state.area;
   let dest=focus?state.selected:-1;
   // 角色默认在 START 按钮位置（不聚焦时），聚焦时跑到目标地点
@@ -208,8 +232,9 @@ function goToSpot(i){
 }
 
 /* ========== 过渡页 ========== */
-function travel(i){
+async function travel(i){
   let a=areas[i];
+  await preloadImage(assets.travel[i]);
   html(`<section class="screen travel-scr">
     <img class="bg-img" src="${assets.travel[i]}" alt="" draggable="false">
 
@@ -248,8 +273,9 @@ function travel(i){
 }
 
 /* ========== 题目页（对话页）========== */
-function showDialog(i){
+async function showDialog(i){
   let a=areas[i];
+  await preloadAll([assets.dialog[i], assets.boy, assets.cat]);
   html(`<section class="screen dialog-scr">
     <img class="bg-img" src="${assets.dialog[i]}" alt="" draggable="false">
 
@@ -381,7 +407,7 @@ function nextSpot(){
 }
 
 /* ========== 结果页 ========== */
-function showResult(){
+async function showResult(){
   let top=Object.entries(state.scores).sort((a,b)=>b[1]-a[1])[0][0];
 
   /* ---- 灯塔抛锚俱乐部 专属页面 ---- */
@@ -556,8 +582,9 @@ function showResult(){
 }
 
 /* ========== 校园行动档案页（图片版）========== */
-function showArchive(){
+async function showArchive(){
   let top=Object.entries(state.scores).sort((a,b)=>b[1]-a[1])[0][0];
+  await preloadImage(archiveArt[top]);
   html(`<section class="screen archive-scr">
     <img class="archive-img" src="${archiveArt[top]}" alt="" draggable="false">
 

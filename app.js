@@ -448,13 +448,6 @@ async function showResult(){
         <button class="lh-btn-profile" onclick="showArchive()">查看我的校园行动档案</button>
       </div>
     </section>`);
-
-    /* 气泡打字机动效 */
-    setTimeout(()=>{
-      let bubbles=document.querySelectorAll('.result-lighthouse .bubble span');
-      typewrite(bubbles[0],'你把光点亮，所有孤帆便看到了彼此的存在。');
-      typewrite(bubbles[1],'Hi，灯塔守夜人');
-    },2200);
     return;
   }
 
@@ -487,12 +480,6 @@ async function showResult(){
         <button class="lh-btn-profile" onclick="showArchive()">查看我的校园行动档案</button>
       </div>
     </section>`);
-
-    setTimeout(()=>{
-      let b=document.querySelectorAll('.result-insight .bubble span');
-      typewrite(b[0],'每一句树洞里的话，都被你收集与回应。');
-      typewrite(b[1],'Hi，情报树懒');
-    },2200);
     return;
   }
 
@@ -526,11 +513,6 @@ async function showResult(){
         <button class="lh-btn-profile" onclick="showArchive()">查看我的校园行动档案</button>
       </div>
     </section>`);
-
-    setTimeout(()=>{
-      let b=document.querySelectorAll('.result-creation .bubble span');
-      typewrite(b[0],'流浪家从不问终点，只捡起路上的光。');
-    },2200);
     return;
   }
 
@@ -563,11 +545,6 @@ async function showResult(){
         <button class="lh-btn-profile" onclick="showArchive()">查看我的校园行动档案</button>
       </div>
     </section>`);
-
-    setTimeout(()=>{
-      let b=document.querySelectorAll('.result-execution .bubble span');
-      typewrite(b[0],'脑洞不够？搓一个；世界太旧？改一个。');
-    },2200);
     return;
   }
 

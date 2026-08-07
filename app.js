@@ -599,6 +599,8 @@ function saveArchiveImage(){
   let orig=document.querySelector('.archive-scr');
   if(!orig) return;
   let clone=orig.cloneNode(true);
+  let btn=clone.querySelector('.abtn-archive-save');
+  if(btn) btn.remove();
   clone.style.position='fixed';clone.style.top='-9999px';clone.style.left='-9999px';
   clone.style.width=orig.offsetWidth+'px';clone.style.height=orig.offsetHeight+'px';
   clone.style.zIndex='-1';

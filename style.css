@@ -913,8 +913,8 @@ body{background:#1a1a2e;overflow-x:hidden;font-family:"PingFang SC","Microsoft Y
   width:64%;height:44px;
   font-size:15px;font-weight:800;letter-spacing:2px;
   border-radius:8px;cursor:pointer;
-  background:rgba(255,255,255,.25);
-  color:#2d4a3e;border:2px solid rgba(45,74,62,.4);
+  background:#1a3c2a;
+  color:#ffe600;border:2px solid #ffe600;
   -webkit-appearance:none;appearance:none;
   touch-action:manipulation;outline:none;
 }

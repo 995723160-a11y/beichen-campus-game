@@ -610,11 +610,17 @@ function saveArchiveImage(){
   });
   html2canvas(clone,{useCORS:true,allowTaint:true,scale:2,backgroundColor:'#f5ecd7',logging:false})
     .then(canvas=>{
-      let a=document.createElement('a');
-      a.download='北辰青年-校园行动档案.png';
-      a.href=canvas.toDataURL('image/png');
-      a.click();
       document.body.removeChild(clone);
+      let dataUrl=canvas.toDataURL('image/png');
+      // 弹层展示，微信用户长按保存
+      let overlay=document.createElement('div');
+      overlay.className='archive-preview-overlay';
+      overlay.innerHTML=`
+        <img class="apv-img" src="${dataUrl}" alt="校园行动档案">
+        <div class="apv-hint">👆 长按上方图片，保存到手机相册</div>
+        <button class="apv-back" onclick="this.parentElement.remove()">返回</button>
+      `;
+      document.body.appendChild(overlay);
     })
     .catch(()=>document.body.removeChild(clone));
 }

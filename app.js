@@ -126,8 +126,6 @@ function type(text,target,done){
 
 /* ========== 启动页 ========== */
 async function home(){
-  // 先预加载启动页背景，再渲染
-  await preloadAll([assets.home, assets.boy, assets.cat]);
   html(`<section class="screen home-scr">
     <img class="bg-img" src="${assets.home}" alt="" draggable="false">
 
@@ -174,7 +172,6 @@ const spotPos=[
 ];
 
 async function showMap(focus){
-  await preloadImage(assets.map);
   let d=state.area;
   let dest=focus?state.selected:-1;
   // 角色默认在 START 按钮位置（不聚焦时），聚焦时跑到目标地点
@@ -563,7 +560,6 @@ async function showResult(){
 /* ========== 校园行动档案页（图片版）========== */
 async function showArchive(){
   let top=Object.entries(state.scores).sort((a,b)=>b[1]-a[1])[0][0];
-  await preloadImage(archiveArt[top]);
   html(`<section class="screen archive-scr">
     <img class="archive-img" src="${archiveArt[top]}" alt="" draggable="false">
 

@@ -561,11 +561,7 @@ function showArchive(){
   html(`<section class="screen archive-scr">
     <img class="archive-img" src="${archiveArt[top]}" alt="" draggable="false">
 
-    <!-- 底部按钮 -->
-    <div class="archive-btns">
-      <button class="pxl-btn abtn-save" onclick="saveArchiveImage()">保存我的档案</button>
-      <button class="pxl-btn abtn-home" onclick="home()">重新探索</button>
-    </div>
+    <button class="abtn-archive-save" onclick="saveArchiveImage()">保存我的档案</button>
   </section>`);
 }
 

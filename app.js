@@ -24,31 +24,31 @@ function hideLoading(){ document.getElementById('loading-overlay')?.classList.re
 /* ========== 资源路径（新图片在美术资源/根目录）========== */
 const A='美术资源/';
 const assets={
-  home:`${A}启动页最新.png`,
-  map:`${A}地图页.png`,
+  home:`${A}启动页最新.webp`,
+  map:`${A}地图页.webp`,
   // 过渡页：4个地点各一张（在 美术资源/过渡页/ 目录下）
   travel:[
-    `${A}过渡页/前往迷雾观察林.png`,   // 0
-    `${A}过渡页/前往青年共生营.png`,   // 1
-    `${A}过渡页/前往灵感造物园.png`,   // 2
-    `${A}过渡页/前往行动引擎站.png`    // 3
+    `${A}过渡页/前往迷雾观察林.webp`,   // 0
+    `${A}过渡页/前往青年共生营.webp`,   // 1
+    `${A}过渡页/前往灵感造物园.webp`,   // 2
+    `${A}过渡页/前往行动引擎站.webp`    // 3
   ],
   // 对话页背景（按地点索引，每个地点专属）
   dialog:[
-    `${A}对话答题页/迷雾观察林-对话页.png`,   // 0 迷雾观察林
-    `${A}对话答题页/青年共生营对话答题页.png`, // 1 青年共生营
-    `${A}对话答题页/灵感造物园对话答题页.png`, // 2 灵感造物园
-    `${A}对话答题页/行动引擎站对话答题页.png`  // 3 行动引擎站
+    `${A}对话答题页/迷雾观察林-对话页.webp`,   // 0 迷雾观察林
+    `${A}对话答题页/青年共生营对话答题页.webp`, // 1 青年共生营
+    `${A}对话答题页/灵感造物园对话答题页.webp`, // 2 灵感造物园
+    `${A}对话答题页/行动引擎站对话答题页.webp`  // 3 行动引擎站
   ],
-  boy:`${A}角色/男角色_去底.png`,
+  boy:`${A}角色/男角色_去底.webp`,
   girl:`${A}角色/女角色_去底.png`,
-  cat:`${A}角色/小猫_去底.png`,
+  cat:`${A}角色/小猫_去底.webp`,
   // 地标标牌图片
   signs:[
-    `${A}地标/迷雾观察林地标牌.png`,
-    `${A}地标/青年共生营地标牌.png`,
-    `${A}地标/灵感造物园地标牌.png`,
-    `${A}地标/行动引擎站地标牌.png`
+    `${A}地标/迷雾观察林地标牌.webp`,
+    `${A}地标/青年共生营地标牌.webp`,
+    `${A}地标/灵感造物园地标牌.webp`,
+    `${A}地标/行动引擎站地标牌.webp`
   ]
 };
 
@@ -70,16 +70,16 @@ const areas=[
 
 // 道具页：背景图（按地点索引）+ 道具素材（按能力属性）
 const rewardBg=[
-  `${A}道具页/迷雾观察林.png`,   // 0
-  `${A}道具页/青年共生营.png`,   // 1
-  `${A}道具页/灵感造物园.png`,   // 2
-  `${A}道具页/行动引擎站.png`    // 3
+  `${A}道具页/迷雾观察林.webp`,   // 0
+  `${A}道具页/青年共生营.webp`,   // 1
+  `${A}道具页/灵感造物园.webp`,   // 2
+  `${A}道具页/行动引擎站.webp`    // 3
 ];
 const rewardItem={
-  insight:`${A}道具页/洞察之镜.png`,
-  connection:`${A}道具页/伙伴火种.png`,
-  creation:`${A}道具页/灵感火花.png`,
-  execution:`${A}道具页/行动背包.png`
+  insight:`${A}道具页/洞察之镜.webp`,
+  connection:`${A}道具页/伙伴火种.webp`,
+  creation:`${A}道具页/灵感火花.webp`,
+  execution:`${A}道具页/行动背包.webp`
 };
 const rewardName={
   insight:'洞察之镜',
@@ -89,26 +89,26 @@ const rewardName={
 };
 
 const art={
-  insight:`${A}结果页/树洞勘探回音站（洞察为第一能力）.png`,
-  connection:`${A}结果页/灯塔抛锚俱乐部（连接为第一能力）.png`,
-  creation:`${A}结果页/月下拾荒流浪所（创意为第一能力）.png`,
-  execution:`${A}结果页/手搓宇宙中心（执行力为第一能力）.png`
+  insight:`${A}结果页/树洞勘探回音站（洞察为第一能力）.webp`,
+  connection:`${A}结果页/灯塔抛锚俱乐部（连接为第一能力）.webp`,
+  creation:`${A}结果页/月下拾荒流浪所（创意为第一能力）.webp`,
+  execution:`${A}结果页/手搓宇宙中心（执行力为第一能力）.webp`
 };
 
 /* 校园行动档案图（4张完整版） */
 const archiveArt={
-  insight:'美术资源/结果页/树洞勘探回音站-校园行动档案.png',
-  connection:'美术资源/结果页/灯塔抛锚俱乐部-行动档案.png',
-  creation:'美术资源/结果页/月下拾荒流浪所-行动档案.png',
-  execution:'美术资源/结果页/手搓宇宙中心-行动档案.png'
+  insight:'美术资源/结果页/树洞勘探回音站-校园行动档案.webp',
+  connection:'美术资源/结果页/灯塔抛锚俱乐部-行动档案.webp',
+  creation:'美术资源/结果页/月下拾荒流浪所-行动档案.webp',
+  execution:'美术资源/结果页/手搓宇宙中心-行动档案.webp'
 };
 
 /* 场景参考图（档案页探索路径用） */
 const sceneRef={
-  insight:`${A}场景参考/迷雾森林.jpg`,
-  connection:`${A}场景参考/伙伴集合点.jpg`,
-  creation:`${A}场景参考/造物花园.jpg`,
-  execution:`${A}场景参考/行动基地.jpg`
+  insight:`${A}场景参考/迷雾森林.webp`,
+  connection:`${A}场景参考/伙伴集合点.webp`,
+  creation:`${A}场景参考/造物花园.webp`,
+  execution:`${A}场景参考/行动基地.webp`
 };
 
 let state={area:0,visited:[false,false,false,false],visitOrder:[],scores:{insight:0,connection:0,creation:0,execution:0},selected:null,lastAbility:null};
@@ -146,7 +146,7 @@ async function home(){
     <!-- 开始探索按钮（新底图+文字） -->
     <div class="start-btn-wrap">
       <button class="hz-start-img" onclick="showMap()" aria-label="开始探索">
-        <img src="home/开始探索按钮.png" draggable="false">
+        <img src="home/开始探索按钮.webp" draggable="false">
         <span class="btn-text">开始探索</span>
       </button>
       <div class="start-btn-hint">点击按钮进入游戏</div>

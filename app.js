@@ -232,9 +232,9 @@ function goToSpot(i){
 }
 
 /* ========== 过渡页 ========== */
-async function travel(i){
+function travel(i){
   let a=areas[i];
-  await preloadImage(assets.travel[i]);
+  // 不等图片，直接渲染（图片后台加载）
   html(`<section class="screen travel-scr">
     <img class="bg-img" src="${assets.travel[i]}" alt="" draggable="false">
 
@@ -275,9 +275,9 @@ async function travel(i){
 }
 
 /* ========== 题目页（对话页）========== */
-async function showDialog(i){
+function showDialog(i){
   let a=areas[i];
-  await preloadAll([assets.dialog[i], assets.boy, assets.cat]);
+  // 不等图片，直接渲染（图片已在travel中预加载或后台加载）
   html(`<section class="screen dialog-scr">
     <img class="bg-img" src="${assets.dialog[i]}" alt="" draggable="false">
 

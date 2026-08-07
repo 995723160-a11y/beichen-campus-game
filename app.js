@@ -268,8 +268,10 @@ async function travel(i){
     </div>
   </section>`);
 
-  // 能量条动画 0.3s延迟 + 2.4s填充 = 2.7s，加 2s 留白防黑屏，4.85s 后自动跳转
-  setTimeout(()=>showDialog(i),3500);
+  // 后台预加载对话页图片，避免跳转时再等加载
+  preloadAll([assets.dialog[i], assets.boy, assets.cat]);
+  // 4秒后自动跳转对话页（图片已缓存，秒开）
+  setTimeout(()=>showDialog(i),4000);
 }
 
 /* ========== 题目页（对话页）========== */

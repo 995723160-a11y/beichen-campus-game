@@ -48,7 +48,7 @@ body{background:#1a1a2e;overflow-x:hidden;font-family:"PingFang SC","Microsoft Y
 
 /* 男孩 + 小猫 角色组合（整体左移，远离瀑布） */
 .home-chars{
-  position:absolute;bottom:48%;left:38%;z-index:16;
+  position:absolute;bottom:28%;left:38%;z-index:16;
   transform:translate(-50%,0);
   display:flex;
   align-items:flex-end;

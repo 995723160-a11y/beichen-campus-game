@@ -269,7 +269,7 @@ async function travel(i){
   </section>`);
 
   // 能量条动画 0.3s延迟 + 2.4s填充 = 2.7s，加 2s 留白防黑屏，4.85s 后自动跳转
-  setTimeout(()=>showDialog(i),4850);
+  setTimeout(()=>showDialog(i),3500);
 }
 
 /* ========== 题目页（对话页）========== */

@@ -337,7 +337,7 @@ body{background:#1a1a2e;overflow-x:hidden;font-family:"PingFang SC","Microsoft Y
 
 /* 气泡提示（角色下方） */
 .map-bubble{
-  position:absolute;left:50%;top:90%;
+  position:absolute;left:20%;top:90%;
   transform:translateX(-50%);
   z-index:19;
   background:rgba(255,255,255,.92);

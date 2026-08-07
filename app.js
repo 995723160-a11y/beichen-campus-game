@@ -159,8 +159,12 @@ async function home(){
     <div class="fx-waterfall"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
   </section>`);
 
-  // 预加载地图页+4张过渡页背景图，消除点击后的黑屏闪
-  [assets.map, ...assets.travel].forEach(src=>{let img=new Image();img.src=src;});
+  // 后台预加载后续页面所有图片：地图地标→道具→结果页→档案
+  [assets.map, ...assets.travel,
+   ...assets.signs, ...rewardBg,
+   ...Object.values(rewardItem), ...Object.values(art),
+   ...Object.values(archiveArt)
+  ].forEach(src=>{let img=new Image();img.src=src;});
 }
 
 /* ========== 地图页 ========== */

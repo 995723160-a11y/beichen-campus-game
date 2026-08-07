@@ -170,9 +170,9 @@ async function home(){
 /* ========== 地图页 ========== */
 const spotPos=[
   {left:'22%',top:'40%'},   // 0:迷雾观察林
-  {left:'79.5%',top:'45%'}, // 1:青年共生营
+  {left:'76.5%',top:'45%'}, // 1:青年共生营
   {left:'27%',top:'70%'},   // 2:灵感造物园
-  {left:'84%',top:'68%'}    // 3:行动引擎站
+  {left:'82.5%',top:'68%'}   // 3:行动引擎站
 ];
 
 async function showMap(focus){

@@ -271,7 +271,7 @@ body{background:#1a1a2e;overflow-x:hidden;font-family:"PingFang SC","Microsoft Y
 .sp3{animation:spBreath 2.5s ease-in-out 1.8s infinite}
 @keyframes spBreath{
   0%,100%{transform:translate(-50%,-90%) scale(1)}
-  50%{transform:translate(-50%,-95%) scale(1.04)}
+  50%{transform:translate(-50%,-92%) scale(1.015)}
 }
 
 /* 选中态的挂牌：发光 + 放大 */

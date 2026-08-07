@@ -216,7 +216,7 @@ body{background:#1a1a2e;overflow-x:hidden;font-family:"PingFang SC","Microsoft Y
 /* 四个地名标牌（图片 + 文字 + 呼吸 + hover 放大 + 已解锁） */
 .spot-sign{
   position:absolute;z-index:17;
-  transform:translate(-50%,-90%);
+  bottom:100%;left:50%;transform:translateX(-50%);
   pointer-events:auto;
   cursor:pointer;
   transition:transform .3s ease;
@@ -270,8 +270,8 @@ body{background:#1a1a2e;overflow-x:hidden;font-family:"PingFang SC","Microsoft Y
 .sp2{animation:spBreath 2.5s ease-in-out 1.2s infinite}
 .sp3{animation:spBreath 2.5s ease-in-out 1.8s infinite}
 @keyframes spBreath{
-  0%,100%{transform:translate(-50%,-90%) scale(1)}
-  50%{transform:translate(-50%,-92%) scale(1.015)}
+  0%,100%{transform:translateX(-50%) scale(1)}
+  50%{transform:translateX(-50%) scale(1.015)}
 }
 
 /* 选中态的挂牌：发光 + 放大 */
